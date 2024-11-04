@@ -1,0 +1,21 @@
+WIDTH=16;
+DEPTH=2048;
+
+ADDRESS_RADIX=HEX;
+DATA_RADIX=HEX;
+
+CONTENT BEGIN
+0000: 080A; -- LOAD Address
+0001: 9846; -- OUT Mem_Add
+0002: 080B; -- LOAD Value
+0003: 9847; -- OUT Mem
+0004: 9805; -- OUT Hex1
+0005: 080A; -- Load Address
+0006: 9846; -- OUT Mem_Add
+0007: 9047; -- IN Mem
+0008: 9804; -- OUT Hex0
+0009: 2809; -- JUMP Here
+000A: 0002; -- Address: Dw 2
+000B: 0005; -- Value: Dw 5
+[000C..07FF] : 0000; -- [empty memory]
+END;

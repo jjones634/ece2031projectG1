@@ -22,5 +22,5 @@ LEDs:      EQU 001
 Timer:     EQU 002
 Hex0:      EQU 004
 Hex1:      EQU 005
-Mem_Add:   EQU 070
-Mem:       EQU 071
+Mem_Add:   EQU &H070
+Mem:       EQU &H071

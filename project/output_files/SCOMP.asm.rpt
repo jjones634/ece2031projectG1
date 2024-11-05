@@ -1,5 +1,5 @@
 Assembler report for SCOMP
-Mon Nov 04 17:25:05 2024
+Mon Nov 04 23:22:00 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -11,7 +11,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   3. Assembler Settings
   4. Assembler Encrypted IP Cores Summary
   5. Assembler Generated Files
-  6. Assembler Device Options: C:/Users/dell/Desktop/ECE2031/project/output_files/SCOMP.sof
+  6. Assembler Device Options: C:/Users/dell/Desktop/ECE2031/ece2031projectG1/project/output_files/SCOMP.sof
   7. Assembler Messages
 
 
@@ -39,7 +39,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Nov 04 17:25:05 2024 ;
+; Assembler Status      ; Successful - Mon Nov 04 23:22:00 2024 ;
 ; Revision Name         ; SCOMP                                 ;
 ; Top-level Entity Name ; SCOMP_System                          ;
 ; Family                ; Cyclone V                             ;
@@ -64,23 +64,23 @@ https://fpgasoftware.intel.com/eula.
 +--------+------------------------+--------------+
 
 
-+--------------------------------------------------------------+
-; Assembler Generated Files                                    ;
-+--------------------------------------------------------------+
-; File Name                                                    ;
-+--------------------------------------------------------------+
-; C:/Users/dell/Desktop/ECE2031/project/output_files/SCOMP.sof ;
-+--------------------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Assembler Generated Files                                                     ;
++-------------------------------------------------------------------------------+
+; File Name                                                                     ;
++-------------------------------------------------------------------------------+
+; C:/Users/dell/Desktop/ECE2031/ece2031projectG1/project/output_files/SCOMP.sof ;
++-------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/dell/Desktop/ECE2031/project/output_files/SCOMP.sof ;
-+----------------+-----------------------------------------------------------------------+
-; Option         ; Setting                                                               ;
-+----------------+-----------------------------------------------------------------------+
-; JTAG usercode  ; 0x03699010                                                            ;
-; Checksum       ; 0x03699010                                                            ;
-+----------------+-----------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/dell/Desktop/ECE2031/ece2031projectG1/project/output_files/SCOMP.sof ;
++----------------+----------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                ;
++----------------+----------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x00EB8866                                                                             ;
+; Checksum       ; 0x00EB8866                                                                             ;
++----------------+----------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -89,15 +89,17 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Nov 04 17:24:56 2024
+    Info: Processing started: Mon Nov 04 23:21:51 2024
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off SCOMP -c SCOMP
 Warning (125092): Tcl Script File ip.qip not found
     Info (125063): set_global_assignment -name QIP_FILE ip.qip
+Warning (125092): Tcl Script File altsyncram_library.qip not found
+    Info (125063): set_global_assignment -name QIP_FILE altsyncram_library.qip
 Info (115030): Assembler is generating device programming files
-Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4883 megabytes
-    Info: Processing ended: Mon Nov 04 17:25:05 2024
+Info: Quartus Prime Assembler was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4856 megabytes
+    Info: Processing ended: Mon Nov 04 23:22:00 2024
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:08
+    Info: Total CPU time (on all processors): 00:00:09
 
 

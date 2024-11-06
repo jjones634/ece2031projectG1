@@ -1,0 +1,88 @@
+WIDTH=16;
+DEPTH=2048;
+
+ADDRESS_RADIX=HEX;
+DATA_RADIX=HEX;
+
+CONTENT BEGIN
+0000: 0849; -- 	LOAD Zero
+0001: 1046; -- 	STORE Address
+0002: 1047; -- 	STORE Value
+0003: 104E; -- 	STORE SwitchInput
+0004: 9804; -- 	OUT Hex0
+0005: 9805; -- 	OUT Hex1
+0006: 803D; -- 	CALL WaitStart ;wait for all switches down
+0007: 8038; -- 		CALL Delay
+0008: 9000; -- 		IN Switches
+0009: 6E00; -- 		ADDI -512
+000A: 4010; -- 		JZERO WaitValue
+000B: 0846; -- 		LOAD Address
+000C: 6801; -- 		ADDI 1
+000D: 1046; -- 		STORE Address
+000E: 9804; -- 		OUT Hex0 ;display the address 
+000F: 2807; -- 		JUMP GenerateAddress
+0010: 803D; -- 		CALL WaitStart
+0011: 8038; -- 		CALL Delay
+0012: 9000; -- 		IN Switches
+0013: 6E00; -- 		ADDI -512
+0014: 401A; -- 		JZERO StoreInMem
+0015: 0847; -- 		LOAD Value
+0016: 6801; -- 		ADDI 1
+0017: 1047; -- 		STORE Value
+0018: 9805; -- 		OUT Hex1 ;display the address 
+0019: 2811; -- 		JUMP GenerateValue
+001A: 0846; -- 		LOAD Address
+001B: 9870; -- 		OUT Mem_Add
+001C: 0847; -- 		LOAD Value
+001D: 9871; -- 		OUT Mem
+001E: 803D; -- 	CALL WaitStart
+001F: 084C; -- 	LOAD Lights3
+0020: 9801; -- 	OUT LEDs ;turn first  2 lights to indicate got to this part
+0021: 8038; -- 		CALL Delay
+0022: 9000; -- 		IN Switches
+0023: 6FFF; -- 		ADDI -1
+0024: 4000; -- 		JZERO Start;means only first switch is up, make a new address
+0025: 6FFE; -- 		ADDI -2
+0026: 4028; -- 		JZERO SearchAddress;means 2 siwtches are up
+0027: 2821; -- 		JUMP Decision
+0028: 0849; -- 		LOAD Zero
+0029: 9804; -- 		OUT Hex0
+002A: 9805; -- 		OUT Hex1
+002B: 084D; -- 		LOAD Lights7
+002C: 9801; -- 		OUT LEDs ;turn first  7 lights to indicate got to this part
+002D: 8038; -- 		CALL Delay
+002E: 9000; -- 		IN Switches
+002F: 104E; -- 		STORE SwitchInput
+0030: 6E00; -- 		ADDI -512
+0031: 4000; -- 		JZERO Start
+0032: 084E; -- 		LOAD SwitchInput
+0033: 9804; -- 		OUT Hex0 ;this will have the address aka switchinput
+0034: 9870; -- 		OUT Mem_Add
+0035: 9071; -- 		IN Mem
+0036: 9805; -- 		OUT Hex1 ; return value at the address
+0037: 282B; -- 		JUMP StartSearch ; loop
+0038: 9802; -- 	OUT    Timer
+0039: 9002; -- 	IN     Timer
+003A: 6FFF; -- 	ADDI   -1
+003B: 3039; -- 	JNEG   WaitingLoop
+003C: 8800; -- 	RETURN
+003D: 084B; -- 	LOAD Lights
+003E: 9801; -- 	OUT LEDs ;turn first light on until done with loop
+003F: 8038; -- 		CALL Delay
+0040: 9000; -- 		IN Switches
+0041: 4043; -- 		JZERO Done
+0042: 283F; -- 		JUMP LoopStall
+0043: 0849; -- 		LOAD Zero
+0044: 9801; -- 		OUT LEDs ;turn off lights
+0045: 8800; -- 		RETURN
+0046: 0000; -- Address: Dw 0
+0047: 0000; -- Value: Dw 0
+0048: 0001; -- One:	DW 1
+0049: 0000; -- Zero:	DW 0
+004A: FFFF; -- NegOne:	DW -1
+004B: 0001; -- Lights: DW 1
+004C: 0003; -- Lights3: DW 3
+004D: 0007; -- Lights7: DW 7
+004E: 0000; -- SwitchInput: DW 0
+[004F..07FF] : 0000; -- [empty memory]
+END;

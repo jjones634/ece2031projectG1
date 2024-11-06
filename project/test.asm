@@ -2,18 +2,39 @@ LOAD Address
 OUT Mem_Add
 LOAD Value
 OUT Mem
-OUT Hex1
+
+LOAD Address2
+OUT Mem_Add
+LOAD Value2
+OUT Mem
+
 Load Address
 OUT Mem_Add
 IN Mem
-OUT Hex0
+OUT Hex1 ; return 5
+
+LOAD Address3
+OUT Mem_Add
+LOAD Value3
+OUT Mem
+
+Load Address3
+OUT Mem_Add
+IN Mem
+OUT Hex0 ; return 22
+
+
 Here:
 JUMP Here
 
 
 
 Address: Dw 2
+Address2: Dw 90
+Address3: Dw 3
 Value: Dw 5
+Value2: Dw 9
+Value3: Dw 22
 
 
 ; IO address constants

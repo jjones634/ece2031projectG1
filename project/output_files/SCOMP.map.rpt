@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SCOMP
-Wed Nov 06 17:51:02 2024
+Tue Nov 12 14:01:09 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -72,7 +72,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Nov 06 17:51:02 2024       ;
+; Analysis & Synthesis Status     ; Successful - Tue Nov 12 14:01:09 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; SCOMP                                       ;
 ; Top-level Entity Name           ; SCOMP_System                                ;
@@ -288,14 +288,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 586                      ;
+; Estimate of Logic utilization (ALMs needed) ; 637                      ;
 ;                                             ;                          ;
-; Combinational ALUT usage for logic          ; 772                      ;
-;     -- 7 input functions                    ; 2                        ;
-;     -- 6 input functions                    ; 174                      ;
-;     -- 5 input functions                    ; 205                      ;
-;     -- 4 input functions                    ; 118                      ;
-;     -- <=3 input functions                  ; 273                      ;
+; Combinational ALUT usage for logic          ; 858                      ;
+;     -- 7 input functions                    ; 1                        ;
+;     -- 6 input functions                    ; 191                      ;
+;     -- 5 input functions                    ; 247                      ;
+;     -- 4 input functions                    ; 139                      ;
+;     -- <=3 input functions                  ; 280                      ;
 ;                                             ;                          ;
 ; Dedicated logic registers                   ; 752                      ;
 ;                                             ;                          ;
@@ -310,8 +310,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 341                      ;
-; Total fan-out                               ; 6662                     ;
-; Average fan-out                             ; 3.90                     ;
+; Total fan-out                               ; 7069                     ;
+; Average fan-out                             ; 3.94                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -320,30 +320,30 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                      ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |SCOMP_System                                                                                                                           ; 772 (55)            ; 752 (0)                   ; 61440             ; 0          ; 68   ; 0            ; |SCOMP_System                                                                                                                                                                                                                                                                                                                                            ; SCOMP_System                      ; work         ;
+; |SCOMP_System                                                                                                                           ; 858 (98)            ; 752 (0)                   ; 61440             ; 0          ; 68   ; 0            ; |SCOMP_System                                                                                                                                                                                                                                                                                                                                            ; SCOMP_System                      ; work         ;
 ;    |DIG_IN:inst7|                                                                                                                       ; 0 (0)               ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|DIG_IN:inst7                                                                                                                                                                                                                                                                                                                               ; DIG_IN                            ; work         ;
 ;    |DIG_OUT:inst21|                                                                                                                     ; 0 (0)               ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|DIG_OUT:inst21                                                                                                                                                                                                                                                                                                                             ; DIG_OUT                           ; work         ;
-;    |ExternalMemory:inst6|                                                                                                               ; 31 (31)             ; 0 (0)                     ; 16384             ; 0          ; 0    ; 0            ; |SCOMP_System|ExternalMemory:inst6                                                                                                                                                                                                                                                                                                                       ; ExternalMemory                    ; work         ;
+;    |ExternalMemory:inst6|                                                                                                               ; 64 (64)             ; 0 (0)                     ; 16384             ; 0          ; 0    ; 0            ; |SCOMP_System|ExternalMemory:inst6                                                                                                                                                                                                                                                                                                                       ; ExternalMemory                    ; work         ;
 ;       |altsyncram:mem_instance|                                                                                                         ; 0 (0)               ; 0 (0)                     ; 16384             ; 0          ; 0    ; 0            ; |SCOMP_System|ExternalMemory:inst6|altsyncram:mem_instance                                                                                                                                                                                                                                                                                               ; altsyncram                        ; work         ;
 ;          |altsyncram_u824:auto_generated|                                                                                               ; 0 (0)               ; 0 (0)                     ; 16384             ; 0          ; 0    ; 0            ; |SCOMP_System|ExternalMemory:inst6|altsyncram:mem_instance|altsyncram_u824:auto_generated                                                                                                                                                                                                                                                                ; altsyncram_u824                   ; work         ;
-;    |HEX_DISP_6:inst9|                                                                                                                   ; 45 (3)              ; 24 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9                                                                                                                                                                                                                                                                                                                           ; HEX_DISP_6                        ; work         ;
+;    |HEX_DISP_6:inst9|                                                                                                                   ; 44 (2)              ; 24 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9                                                                                                                                                                                                                                                                                                                           ; HEX_DISP_6                        ; work         ;
 ;       |HEX_DISP:inst1|                                                                                                                  ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst1                                                                                                                                                                                                                                                                                                            ; HEX_DISP                          ; work         ;
 ;       |HEX_DISP:inst2|                                                                                                                  ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst2                                                                                                                                                                                                                                                                                                            ; HEX_DISP                          ; work         ;
 ;       |HEX_DISP:inst3|                                                                                                                  ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst3                                                                                                                                                                                                                                                                                                            ; HEX_DISP                          ; work         ;
 ;       |HEX_DISP:inst4|                                                                                                                  ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst4                                                                                                                                                                                                                                                                                                            ; HEX_DISP                          ; work         ;
 ;       |HEX_DISP:inst5|                                                                                                                  ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst5                                                                                                                                                                                                                                                                                                            ; HEX_DISP                          ; work         ;
 ;       |HEX_DISP:inst6|                                                                                                                  ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst6                                                                                                                                                                                                                                                                                                            ; HEX_DISP                          ; work         ;
-;    |IO_DECODER:inst3|                                                                                                                   ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|IO_DECODER:inst3                                                                                                                                                                                                                                                                                                                           ; IO_DECODER                        ; work         ;
+;    |IO_DECODER:inst3|                                                                                                                   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|IO_DECODER:inst3                                                                                                                                                                                                                                                                                                                           ; IO_DECODER                        ; work         ;
 ;    |PLL_main:inst1|                                                                                                                     ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|PLL_main:inst1                                                                                                                                                                                                                                                                                                                             ; PLL_main                          ; pll_main     ;
 ;       |PLL_main_0002:pll_main_inst|                                                                                                     ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|PLL_main:inst1|PLL_main_0002:pll_main_inst                                                                                                                                                                                                                                                                                                 ; PLL_main_0002                     ; PLL_main     ;
 ;          |altera_pll:altera_pll_i|                                                                                                      ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i                                                                                                                                                                                                                                                                         ; altera_pll                        ; work         ;
 ;             |altera_cyclonev_pll:cyclonev_pll|                                                                                          ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_cyclonev_pll:cyclonev_pll                                                                                                                                                                                                                                        ; altera_cyclonev_pll               ; work         ;
 ;                |altera_cyclonev_pll_base:fpll_0|                                                                                        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_cyclonev_pll:cyclonev_pll|altera_cyclonev_pll_base:fpll_0                                                                                                                                                                                                        ; altera_cyclonev_pll_base          ; work         ;
-;    |SCOMP:inst|                                                                                                                         ; 242 (202)           ; 179 (179)                 ; 32768             ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst                                                                                                                                                                                                                                                                                                                                 ; SCOMP                             ; work         ;
+;    |SCOMP:inst|                                                                                                                         ; 255 (210)           ; 179 (179)                 ; 32768             ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst                                                                                                                                                                                                                                                                                                                                 ; SCOMP                             ; work         ;
 ;       |altsyncram:altsyncram_component|                                                                                                 ; 0 (0)               ; 0 (0)                     ; 32768             ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                                 ; altsyncram                        ; work         ;
 ;          |altsyncram_t424:auto_generated|                                                                                               ; 0 (0)               ; 0 (0)                     ; 32768             ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst|altsyncram:altsyncram_component|altsyncram_t424:auto_generated                                                                                                                                                                                                                                                                  ; altsyncram_t424                   ; work         ;
-;       |lpm_clshift:shifter|                                                                                                             ; 40 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter                                                                                                                                                                                                                                                                                                             ; lpm_clshift                       ; work         ;
-;          |lpm_clshift_fuc:auto_generated|                                                                                               ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter|lpm_clshift_fuc:auto_generated                                                                                                                                                                                                                                                                              ; lpm_clshift_fuc                   ; work         ;
+;       |lpm_clshift:shifter|                                                                                                             ; 45 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter                                                                                                                                                                                                                                                                                                             ; lpm_clshift                       ; work         ;
+;          |lpm_clshift_fuc:auto_generated|                                                                                               ; 45 (45)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter|lpm_clshift_fuc:auto_generated                                                                                                                                                                                                                                                                              ; lpm_clshift_fuc                   ; work         ;
 ;    |TIMER:inst4|                                                                                                                        ; 33 (33)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|TIMER:inst4                                                                                                                                                                                                                                                                                                                                ; TIMER                             ; work         ;
 ;    |clk_div:inst5|                                                                                                                      ; 27 (27)             ; 22 (22)                   ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|clk_div:inst5                                                                                                                                                                                                                                                                                                                              ; clk_div                           ; work         ;
 ;    |sld_hub:auto_hub|                                                                                                                   ; 92 (1)              ; 90 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
@@ -476,6 +476,15 @@ Encoding Type:  One-Hot
 +-----------------------------------------------------+------------------------------------------+------------------------+
 ; Latch Name                                          ; Latch Enable Signal                      ; Free of Timing Hazards ;
 +-----------------------------------------------------+------------------------------------------+------------------------+
+; ExternalMemory:inst6|access_granted[0]              ; ExternalMemory:inst6|password_entered[0] ; yes                    ;
+; ExternalMemory:inst6|address_register[8]            ; ExternalMemory:inst6|address_register[0] ; yes                    ;
+; ExternalMemory:inst6|address_register[9]            ; ExternalMemory:inst6|address_register[0] ; yes                    ;
+; ExternalMemory:inst6|address_register[10]           ; ExternalMemory:inst6|address_register[0] ; yes                    ;
+; ExternalMemory:inst6|address_register[11]           ; ExternalMemory:inst6|address_register[0] ; yes                    ;
+; ExternalMemory:inst6|address_register[12]           ; ExternalMemory:inst6|address_register[0] ; yes                    ;
+; ExternalMemory:inst6|address_register[13]           ; ExternalMemory:inst6|address_register[0] ; yes                    ;
+; ExternalMemory:inst6|address_register[14]           ; ExternalMemory:inst6|address_register[0] ; yes                    ;
+; ExternalMemory:inst6|address_register[15]           ; ExternalMemory:inst6|address_register[0] ; yes                    ;
 ; TIMER:inst4|IO_COUNT[0]                             ; IO_DECODER:inst3|TIMER_EN                ; yes                    ;
 ; TIMER:inst4|IO_COUNT[1]                             ; IO_DECODER:inst3|TIMER_EN                ; yes                    ;
 ; TIMER:inst4|IO_COUNT[2]                             ; IO_DECODER:inst3|TIMER_EN                ; yes                    ;
@@ -492,6 +501,22 @@ Encoding Type:  One-Hot
 ; TIMER:inst4|IO_COUNT[13]                            ; IO_DECODER:inst3|TIMER_EN                ; yes                    ;
 ; TIMER:inst4|IO_COUNT[14]                            ; IO_DECODER:inst3|TIMER_EN                ; yes                    ;
 ; TIMER:inst4|IO_COUNT[15]                            ; IO_DECODER:inst3|TIMER_EN                ; yes                    ;
+; ExternalMemory:inst6|password_entered[0]            ; ExternalMemory:inst6|password_entered[0] ; yes                    ;
+; ExternalMemory:inst6|password_entered[1]            ; ExternalMemory:inst6|password_entered[0] ; yes                    ;
+; ExternalMemory:inst6|password_entered[2]            ; ExternalMemory:inst6|password_entered[0] ; yes                    ;
+; ExternalMemory:inst6|password_entered[3]            ; ExternalMemory:inst6|password_entered[0] ; yes                    ;
+; ExternalMemory:inst6|password_entered[4]            ; ExternalMemory:inst6|password_entered[0] ; yes                    ;
+; ExternalMemory:inst6|password_entered[5]            ; ExternalMemory:inst6|password_entered[0] ; yes                    ;
+; ExternalMemory:inst6|password_entered[6]            ; ExternalMemory:inst6|password_entered[0] ; yes                    ;
+; ExternalMemory:inst6|password_entered[7]            ; ExternalMemory:inst6|password_entered[0] ; yes                    ;
+; ExternalMemory:inst6|password_entered[8]            ; ExternalMemory:inst6|password_entered[0] ; yes                    ;
+; ExternalMemory:inst6|password_entered[9]            ; ExternalMemory:inst6|password_entered[0] ; yes                    ;
+; ExternalMemory:inst6|password_entered[10]           ; ExternalMemory:inst6|password_entered[0] ; yes                    ;
+; ExternalMemory:inst6|password_entered[11]           ; ExternalMemory:inst6|password_entered[0] ; yes                    ;
+; ExternalMemory:inst6|password_entered[12]           ; ExternalMemory:inst6|password_entered[0] ; yes                    ;
+; ExternalMemory:inst6|password_entered[13]           ; ExternalMemory:inst6|password_entered[0] ; yes                    ;
+; ExternalMemory:inst6|password_entered[14]           ; ExternalMemory:inst6|password_entered[0] ; yes                    ;
+; ExternalMemory:inst6|password_entered[15]           ; ExternalMemory:inst6|password_entered[0] ; yes                    ;
 ; ExternalMemory:inst6|mem_data_in[0]                 ; ExternalMemory:inst6|mem_data_in[0]      ; yes                    ;
 ; ExternalMemory:inst6|address_register[0]            ; ExternalMemory:inst6|address_register[0] ; yes                    ;
 ; ExternalMemory:inst6|address_register[1]            ; ExternalMemory:inst6|address_register[0] ; yes                    ;
@@ -501,8 +526,6 @@ Encoding Type:  One-Hot
 ; ExternalMemory:inst6|address_register[5]            ; ExternalMemory:inst6|address_register[0] ; yes                    ;
 ; ExternalMemory:inst6|address_register[6]            ; ExternalMemory:inst6|address_register[0] ; yes                    ;
 ; ExternalMemory:inst6|address_register[7]            ; ExternalMemory:inst6|address_register[0] ; yes                    ;
-; ExternalMemory:inst6|address_register[8]            ; ExternalMemory:inst6|address_register[0] ; yes                    ;
-; ExternalMemory:inst6|address_register[9]            ; ExternalMemory:inst6|address_register[0] ; yes                    ;
 ; ExternalMemory:inst6|mem_data_in[1]                 ; ExternalMemory:inst6|mem_data_in[0]      ; yes                    ;
 ; ExternalMemory:inst6|mem_data_in[2]                 ; ExternalMemory:inst6|mem_data_in[0]      ; yes                    ;
 ; ExternalMemory:inst6|mem_data_in[3]                 ; ExternalMemory:inst6|mem_data_in[0]      ; yes                    ;
@@ -518,7 +541,7 @@ Encoding Type:  One-Hot
 ; ExternalMemory:inst6|mem_data_in[13]                ; ExternalMemory:inst6|mem_data_in[0]      ; yes                    ;
 ; ExternalMemory:inst6|mem_data_in[14]                ; ExternalMemory:inst6|mem_data_in[0]      ; yes                    ;
 ; ExternalMemory:inst6|mem_data_in[15]                ; ExternalMemory:inst6|mem_data_in[0]      ; yes                    ;
-; Number of user-specified and inferred latches = 42  ;                                          ;                        ;
+; Number of user-specified and inferred latches = 65  ;                                          ;                        ;
 +-----------------------------------------------------+------------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -625,11 +648,11 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
-; 3:1                ; 99 bits   ; 198 LEs       ; 0 LEs                ; 198 LEs                ; Yes        ; |SCOMP_System|SCOMP:inst|PC_stack[3][2] ;
-; 12:1               ; 11 bits   ; 88 LEs        ; 22 LEs               ; 66 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|PC[4]          ;
-; 13:1               ; 16 bits   ; 128 LEs       ; 112 LEs              ; 16 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|AC[12]         ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |SCOMP_System|IO_DATA[13]               ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |SCOMP_System|IO_DATA[2]                ;
+; 3:1                ; 99 bits   ; 198 LEs       ; 0 LEs                ; 198 LEs                ; Yes        ; |SCOMP_System|SCOMP:inst|PC_stack[3][1] ;
+; 12:1               ; 11 bits   ; 88 LEs        ; 22 LEs               ; 66 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|PC[5]          ;
+; 13:1               ; 16 bits   ; 128 LEs       ; 112 LEs              ; 16 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|AC[8]          ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |SCOMP_System|IO_DATA[15]               ;
+; 5:1                ; 9 bits    ; 27 LEs        ; 27 LEs               ; 0 LEs                  ; No         ; |SCOMP_System|IO_DATA[9]                ;
 ; 13:1               ; 16 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |SCOMP_System|SCOMP:inst|Add1           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
 
@@ -1273,21 +1296,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SLD                 ; 99                    ;
 ;     SCLR                    ; 20                    ;
 ;     plain                   ; 12                    ;
-; arriav_lcell_comb           ; 448                   ;
+; arriav_lcell_comb           ; 534                   ;
 ;     arith                   ; 63                    ;
 ;         1 data inputs       ; 46                    ;
 ;         2 data inputs       ; 1                     ;
 ;         5 data inputs       ; 16                    ;
-;     extend                  ; 1                     ;
-;         7 data inputs       ; 1                     ;
-;     normal                  ; 384                   ;
+;     normal                  ; 471                   ;
 ;         0 data inputs       ; 1                     ;
 ;         1 data inputs       ; 7                     ;
-;         2 data inputs       ; 12                    ;
-;         3 data inputs       ; 50                    ;
-;         4 data inputs       ; 81                    ;
-;         5 data inputs       ; 120                   ;
-;         6 data inputs       ; 113                   ;
+;         2 data inputs       ; 15                    ;
+;         3 data inputs       ; 54                    ;
+;         4 data inputs       ; 102                   ;
+;         5 data inputs       ; 162                   ;
+;         6 data inputs       ; 130                   ;
 ; boundary_port               ; 69                    ;
 ; cyclonev_fractional_pll     ; 1                     ;
 ; cyclonev_pll_output_counter ; 1                     ;
@@ -1295,8 +1316,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; cyclonev_pll_refclk_select  ; 1                     ;
 ; stratixv_ram_block          ; 32                    ;
 ;                             ;                       ;
-; Max LUT depth               ; 5.50                  ;
-; Average LUT depth           ; 2.64                  ;
+; Max LUT depth               ; 6.00                  ;
+; Average LUT depth           ; 2.91                  ;
 +-----------------------------+-----------------------+
 
 
@@ -1305,7 +1326,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -1362,7 +1383,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Nov 06 17:50:27 2024
+    Info: Processing started: Tue Nov 12 14:00:04 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SCOMP -c SCOMP
 Warning (125092): Tcl Script File ip.qip not found
     Info (125063): set_global_assignment -name QIP_FILE ip.qip
@@ -1400,8 +1421,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file pll_mai
 Info (12021): Found 1 design units, including 1 entities, in source file pll_main/pll_main_0002.v
     Info (12023): Found entity 1: PLL_main_0002 File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/PLL_main/PLL_main_0002.v Line: 2
 Info (12021): Found 2 design units, including 1 entities, in source file externalmemory.vhd
-    Info (12022): Found design unit 1: ExternalMemory-Behavioral File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 192
-    Info (12023): Found entity 1: ExternalMemory File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 181
+    Info (12022): Found design unit 1: ExternalMemory-Behavioral File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 19
+    Info (12023): Found entity 1: ExternalMemory File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 8
 Info (12127): Elaborating entity "SCOMP_System" for the top level hierarchy
 Info (12128): Elaborating entity "HEX_DISP_6" for hierarchy "HEX_DISP_6:inst9"
 Info (12128): Elaborating entity "HEX_DISP" for hierarchy "HEX_DISP_6:inst9|HEX_DISP:inst1"
@@ -1739,47 +1760,97 @@ Info (10041): Inferred latch for "IO_COUNT[14]" at TIMER.vhd(59) File: C:/Users/
 Info (10041): Inferred latch for "IO_COUNT[15]" at TIMER.vhd(59) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/TIMER.vhd Line: 59
 Info (12128): Elaborating entity "clk_div" for hierarchy "clk_div:inst5"
 Info (12128): Elaborating entity "ExternalMemory" for hierarchy "ExternalMemory:inst6"
-Warning (10492): VHDL Process Statement warning at ExternalMemory.vhd(211): signal "IO_ADDR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 211
-Warning (10492): VHDL Process Statement warning at ExternalMemory.vhd(212): signal "IO_DATA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 212
-Warning (10492): VHDL Process Statement warning at ExternalMemory.vhd(216): signal "IO_ADDR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 216
-Warning (10492): VHDL Process Statement warning at ExternalMemory.vhd(219): signal "IO_DATA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 219
-Warning (10631): VHDL Process Statement warning at ExternalMemory.vhd(203): inferring latch(es) for signal or variable "address_register", which holds its previous value in one or more paths through the process File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Warning (10631): VHDL Process Statement warning at ExternalMemory.vhd(203): inferring latch(es) for signal or variable "mem_data_in", which holds its previous value in one or more paths through the process File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Info (10041): Inferred latch for "mem_data_in[0]" at ExternalMemory.vhd(203) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Info (10041): Inferred latch for "mem_data_in[1]" at ExternalMemory.vhd(203) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Info (10041): Inferred latch for "mem_data_in[2]" at ExternalMemory.vhd(203) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Info (10041): Inferred latch for "mem_data_in[3]" at ExternalMemory.vhd(203) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Info (10041): Inferred latch for "mem_data_in[4]" at ExternalMemory.vhd(203) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Info (10041): Inferred latch for "mem_data_in[5]" at ExternalMemory.vhd(203) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Info (10041): Inferred latch for "mem_data_in[6]" at ExternalMemory.vhd(203) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Info (10041): Inferred latch for "mem_data_in[7]" at ExternalMemory.vhd(203) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Info (10041): Inferred latch for "mem_data_in[8]" at ExternalMemory.vhd(203) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Info (10041): Inferred latch for "mem_data_in[9]" at ExternalMemory.vhd(203) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Info (10041): Inferred latch for "mem_data_in[10]" at ExternalMemory.vhd(203) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Info (10041): Inferred latch for "mem_data_in[11]" at ExternalMemory.vhd(203) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Info (10041): Inferred latch for "mem_data_in[12]" at ExternalMemory.vhd(203) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Info (10041): Inferred latch for "mem_data_in[13]" at ExternalMemory.vhd(203) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Info (10041): Inferred latch for "mem_data_in[14]" at ExternalMemory.vhd(203) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Info (10041): Inferred latch for "mem_data_in[15]" at ExternalMemory.vhd(203) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Info (10041): Inferred latch for "address_register[0]" at ExternalMemory.vhd(203) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Info (10041): Inferred latch for "address_register[1]" at ExternalMemory.vhd(203) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Info (10041): Inferred latch for "address_register[2]" at ExternalMemory.vhd(203) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Info (10041): Inferred latch for "address_register[3]" at ExternalMemory.vhd(203) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Info (10041): Inferred latch for "address_register[4]" at ExternalMemory.vhd(203) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Info (10041): Inferred latch for "address_register[5]" at ExternalMemory.vhd(203) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Info (10041): Inferred latch for "address_register[6]" at ExternalMemory.vhd(203) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Info (10041): Inferred latch for "address_register[7]" at ExternalMemory.vhd(203) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Info (10041): Inferred latch for "address_register[8]" at ExternalMemory.vhd(203) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Info (10041): Inferred latch for "address_register[9]" at ExternalMemory.vhd(203) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Info (10041): Inferred latch for "address_register[10]" at ExternalMemory.vhd(203) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Info (10041): Inferred latch for "address_register[11]" at ExternalMemory.vhd(203) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Info (10041): Inferred latch for "address_register[12]" at ExternalMemory.vhd(203) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Info (10041): Inferred latch for "address_register[13]" at ExternalMemory.vhd(203) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Info (10041): Inferred latch for "address_register[14]" at ExternalMemory.vhd(203) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Info (10041): Inferred latch for "address_register[15]" at ExternalMemory.vhd(203) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-Info (12128): Elaborating entity "altsyncram" for hierarchy "ExternalMemory:inst6|altsyncram:mem_instance" File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 245
-Info (12130): Elaborated megafunction instantiation "ExternalMemory:inst6|altsyncram:mem_instance" File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 245
-Info (12133): Instantiated megafunction "ExternalMemory:inst6|altsyncram:mem_instance" with the following parameter: File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 245
+Warning (10540): VHDL Signal Declaration warning at ExternalMemory.vhd(27): used explicit default value for signal "password_register" because signal was never assigned a value File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 27
+Warning (10492): VHDL Process Statement warning at ExternalMemory.vhd(44): signal "IO_ADDR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 44
+Warning (10492): VHDL Process Statement warning at ExternalMemory.vhd(45): signal "IO_DATA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 45
+Warning (10492): VHDL Process Statement warning at ExternalMemory.vhd(46): signal "password_entered" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 46
+Warning (10492): VHDL Process Statement warning at ExternalMemory.vhd(46): signal "password_register" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 46
+Warning (10492): VHDL Process Statement warning at ExternalMemory.vhd(54): signal "IO_ADDR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 54
+Warning (10492): VHDL Process Statement warning at ExternalMemory.vhd(55): signal "IO_DATA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 55
+Warning (10492): VHDL Process Statement warning at ExternalMemory.vhd(59): signal "IO_ADDR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 59
+Warning (10492): VHDL Process Statement warning at ExternalMemory.vhd(59): signal "address_register" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 59
+Warning (10492): VHDL Process Statement warning at ExternalMemory.vhd(62): signal "IO_DATA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 62
+Warning (10492): VHDL Process Statement warning at ExternalMemory.vhd(67): signal "IO_ADDR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 67
+Warning (10492): VHDL Process Statement warning at ExternalMemory.vhd(67): signal "address_register" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 67
+Warning (10492): VHDL Process Statement warning at ExternalMemory.vhd(68): signal "access_granted" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 68
+Warning (10492): VHDL Process Statement warning at ExternalMemory.vhd(69): signal "IO_DATA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 69
+Warning (10631): VHDL Process Statement warning at ExternalMemory.vhd(35): inferring latch(es) for signal or variable "address_register", which holds its previous value in one or more paths through the process File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Warning (10631): VHDL Process Statement warning at ExternalMemory.vhd(35): inferring latch(es) for signal or variable "mem_data_in", which holds its previous value in one or more paths through the process File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Warning (10631): VHDL Process Statement warning at ExternalMemory.vhd(35): inferring latch(es) for signal or variable "access_granted", which holds its previous value in one or more paths through the process File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Warning (10631): VHDL Process Statement warning at ExternalMemory.vhd(35): inferring latch(es) for signal or variable "password_entered", which holds its previous value in one or more paths through the process File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Warning (10492): VHDL Process Statement warning at ExternalMemory.vhd(87): signal "address_register" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 87
+Warning (10492): VHDL Process Statement warning at ExternalMemory.vhd(89): signal "address_register" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 89
+Warning (10492): VHDL Process Statement warning at ExternalMemory.vhd(89): signal "access_granted" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 89
+Warning (10492): VHDL Process Statement warning at ExternalMemory.vhd(91): signal "address_register" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 91
+Warning (10492): VHDL Process Statement warning at ExternalMemory.vhd(91): signal "access_granted" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 91
+Warning (10492): VHDL Process Statement warning at ExternalMemory.vhd(94): signal "access_granted" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 94
+Info (10041): Inferred latch for "password_entered[0]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "password_entered[1]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "password_entered[2]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "password_entered[3]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "password_entered[4]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "password_entered[5]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "password_entered[6]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "password_entered[7]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "password_entered[8]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "password_entered[9]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "password_entered[10]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "password_entered[11]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "password_entered[12]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "password_entered[13]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "password_entered[14]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "password_entered[15]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "access_granted[0]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "access_granted[1]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "access_granted[2]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "access_granted[3]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "access_granted[4]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "access_granted[5]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "access_granted[6]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "access_granted[7]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "access_granted[8]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "access_granted[9]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "access_granted[10]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "access_granted[11]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "access_granted[12]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "access_granted[13]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "access_granted[14]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "access_granted[15]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "mem_data_in[0]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "mem_data_in[1]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "mem_data_in[2]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "mem_data_in[3]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "mem_data_in[4]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "mem_data_in[5]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "mem_data_in[6]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "mem_data_in[7]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "mem_data_in[8]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "mem_data_in[9]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "mem_data_in[10]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "mem_data_in[11]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "mem_data_in[12]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "mem_data_in[13]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "mem_data_in[14]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "mem_data_in[15]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "address_register[0]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "address_register[1]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "address_register[2]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "address_register[3]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "address_register[4]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "address_register[5]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "address_register[6]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "address_register[7]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "address_register[8]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "address_register[9]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "address_register[10]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "address_register[11]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "address_register[12]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "address_register[13]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "address_register[14]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (10041): Inferred latch for "address_register[15]" at ExternalMemory.vhd(35) File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+Info (12128): Elaborating entity "altsyncram" for hierarchy "ExternalMemory:inst6|altsyncram:mem_instance" File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 101
+Info (12130): Elaborated megafunction instantiation "ExternalMemory:inst6|altsyncram:mem_instance" File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 101
+Info (12133): Instantiated megafunction "ExternalMemory:inst6|altsyncram:mem_instance" with the following parameter: File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 101
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -1858,7 +1929,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_99c File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/db/cmpr_99c.tdf Line: 23
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2024.11.06.17:50:45 Progress: Loading sldfd7bd03d/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2024.11.12.14:00:46 Progress: Loading sldfd7bd03d/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1906,57 +1977,101 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13048): Converted tri-state node "IO_DATA[2]" into a selector File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/HEX_DISP.vhd Line: 25
     Warning (13048): Converted tri-state node "IO_DATA[1]" into a selector File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/HEX_DISP.vhd Line: 25
     Warning (13048): Converted tri-state node "IO_DATA[0]" into a selector File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/HEX_DISP.vhd Line: 25
-Warning (13012): Latch ExternalMemory:inst6|mem_data_in[0] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
+Warning (13012): Latch ExternalMemory:inst6|address_register[8] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IO_DECODER:inst3|EXTMEM_EN File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/IO_DECODER.vhd Line: 20
+Warning (13012): Latch ExternalMemory:inst6|address_register[9] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IO_DECODER:inst3|EXTMEM_EN File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/IO_DECODER.vhd Line: 20
+Warning (13012): Latch ExternalMemory:inst6|address_register[10] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
     Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/SCOMP.vhd Line: 57
-Warning (13012): Latch ExternalMemory:inst6|address_register[0] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
+Warning (13012): Latch ExternalMemory:inst6|address_register[11] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
     Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/SCOMP.vhd Line: 57
-Warning (13012): Latch ExternalMemory:inst6|address_register[1] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
+Warning (13012): Latch ExternalMemory:inst6|address_register[12] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
     Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/SCOMP.vhd Line: 57
-Warning (13012): Latch ExternalMemory:inst6|address_register[2] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
+Warning (13012): Latch ExternalMemory:inst6|address_register[13] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
     Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/SCOMP.vhd Line: 57
-Warning (13012): Latch ExternalMemory:inst6|address_register[3] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
+Warning (13012): Latch ExternalMemory:inst6|address_register[14] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
     Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/SCOMP.vhd Line: 57
-Warning (13012): Latch ExternalMemory:inst6|address_register[4] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
+Warning (13012): Latch ExternalMemory:inst6|address_register[15] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
     Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/SCOMP.vhd Line: 57
-Warning (13012): Latch ExternalMemory:inst6|address_register[5] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
+Warning (13012): Latch ExternalMemory:inst6|password_entered[0] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
     Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/SCOMP.vhd Line: 57
-Warning (13012): Latch ExternalMemory:inst6|address_register[6] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
+Warning (13012): Latch ExternalMemory:inst6|password_entered[1] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_cyclonev_pll:cyclonev_pll|altera_cyclonev_pll_base:fpll_0|lock File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_cyclonev_pll.v Line: 219
+Warning (13012): Latch ExternalMemory:inst6|password_entered[2] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_cyclonev_pll:cyclonev_pll|altera_cyclonev_pll_base:fpll_0|lock File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_cyclonev_pll.v Line: 219
+Warning (13012): Latch ExternalMemory:inst6|password_entered[3] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_cyclonev_pll:cyclonev_pll|altera_cyclonev_pll_base:fpll_0|lock File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_cyclonev_pll.v Line: 219
+Warning (13012): Latch ExternalMemory:inst6|password_entered[4] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_cyclonev_pll:cyclonev_pll|altera_cyclonev_pll_base:fpll_0|lock File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_cyclonev_pll.v Line: 219
+Warning (13012): Latch ExternalMemory:inst6|password_entered[5] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_cyclonev_pll:cyclonev_pll|altera_cyclonev_pll_base:fpll_0|lock File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_cyclonev_pll.v Line: 219
+Warning (13012): Latch ExternalMemory:inst6|password_entered[6] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_cyclonev_pll:cyclonev_pll|altera_cyclonev_pll_base:fpll_0|lock File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_cyclonev_pll.v Line: 219
+Warning (13012): Latch ExternalMemory:inst6|password_entered[7] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_cyclonev_pll:cyclonev_pll|altera_cyclonev_pll_base:fpll_0|lock File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_cyclonev_pll.v Line: 219
+Warning (13012): Latch ExternalMemory:inst6|password_entered[8] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_cyclonev_pll:cyclonev_pll|altera_cyclonev_pll_base:fpll_0|lock File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_cyclonev_pll.v Line: 219
+Warning (13012): Latch ExternalMemory:inst6|password_entered[9] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_cyclonev_pll:cyclonev_pll|altera_cyclonev_pll_base:fpll_0|lock File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_cyclonev_pll.v Line: 219
+Warning (13012): Latch ExternalMemory:inst6|password_entered[10] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
     Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/SCOMP.vhd Line: 57
-Warning (13012): Latch ExternalMemory:inst6|address_register[7] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
+Warning (13012): Latch ExternalMemory:inst6|password_entered[11] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
     Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/SCOMP.vhd Line: 57
-Warning (13012): Latch ExternalMemory:inst6|address_register[8] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
+Warning (13012): Latch ExternalMemory:inst6|password_entered[12] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
     Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/SCOMP.vhd Line: 57
-Warning (13012): Latch ExternalMemory:inst6|address_register[9] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
+Warning (13012): Latch ExternalMemory:inst6|password_entered[13] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
     Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/SCOMP.vhd Line: 57
-Warning (13012): Latch ExternalMemory:inst6|mem_data_in[1] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
+Warning (13012): Latch ExternalMemory:inst6|password_entered[14] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
     Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/SCOMP.vhd Line: 57
-Warning (13012): Latch ExternalMemory:inst6|mem_data_in[2] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
+Warning (13012): Latch ExternalMemory:inst6|password_entered[15] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
     Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/SCOMP.vhd Line: 57
-Warning (13012): Latch ExternalMemory:inst6|mem_data_in[3] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
+Warning (13012): Latch ExternalMemory:inst6|mem_data_in[0] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
     Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/SCOMP.vhd Line: 57
-Warning (13012): Latch ExternalMemory:inst6|mem_data_in[4] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
+Warning (13012): Latch ExternalMemory:inst6|address_register[0] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
     Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/SCOMP.vhd Line: 57
-Warning (13012): Latch ExternalMemory:inst6|mem_data_in[5] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
+Warning (13012): Latch ExternalMemory:inst6|address_register[1] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IO_DECODER:inst3|EXTMEM_EN File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/IO_DECODER.vhd Line: 20
+Warning (13012): Latch ExternalMemory:inst6|address_register[2] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IO_DECODER:inst3|EXTMEM_EN File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/IO_DECODER.vhd Line: 20
+Warning (13012): Latch ExternalMemory:inst6|address_register[3] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IO_DECODER:inst3|EXTMEM_EN File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/IO_DECODER.vhd Line: 20
+Warning (13012): Latch ExternalMemory:inst6|address_register[4] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IO_DECODER:inst3|EXTMEM_EN File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/IO_DECODER.vhd Line: 20
+Warning (13012): Latch ExternalMemory:inst6|address_register[5] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IO_DECODER:inst3|EXTMEM_EN File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/IO_DECODER.vhd Line: 20
+Warning (13012): Latch ExternalMemory:inst6|address_register[6] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IO_DECODER:inst3|EXTMEM_EN File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/IO_DECODER.vhd Line: 20
+Warning (13012): Latch ExternalMemory:inst6|address_register[7] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IO_DECODER:inst3|EXTMEM_EN File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/IO_DECODER.vhd Line: 20
+Warning (13012): Latch ExternalMemory:inst6|mem_data_in[1] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IO_DECODER:inst3|EXTMEM_EN File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/IO_DECODER.vhd Line: 20
+Warning (13012): Latch ExternalMemory:inst6|mem_data_in[2] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IO_DECODER:inst3|EXTMEM_EN File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/IO_DECODER.vhd Line: 20
+Warning (13012): Latch ExternalMemory:inst6|mem_data_in[3] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IO_DECODER:inst3|EXTMEM_EN File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/IO_DECODER.vhd Line: 20
+Warning (13012): Latch ExternalMemory:inst6|mem_data_in[4] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IO_DECODER:inst3|EXTMEM_EN File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/IO_DECODER.vhd Line: 20
+Warning (13012): Latch ExternalMemory:inst6|mem_data_in[5] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IO_DECODER:inst3|EXTMEM_EN File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/IO_DECODER.vhd Line: 20
+Warning (13012): Latch ExternalMemory:inst6|mem_data_in[6] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IO_DECODER:inst3|EXTMEM_EN File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/IO_DECODER.vhd Line: 20
+Warning (13012): Latch ExternalMemory:inst6|mem_data_in[7] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IO_DECODER:inst3|EXTMEM_EN File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/IO_DECODER.vhd Line: 20
+Warning (13012): Latch ExternalMemory:inst6|mem_data_in[8] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IO_DECODER:inst3|EXTMEM_EN File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/IO_DECODER.vhd Line: 20
+Warning (13012): Latch ExternalMemory:inst6|mem_data_in[9] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IO_DECODER:inst3|EXTMEM_EN File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/IO_DECODER.vhd Line: 20
+Warning (13012): Latch ExternalMemory:inst6|mem_data_in[10] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
     Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/SCOMP.vhd Line: 57
-Warning (13012): Latch ExternalMemory:inst6|mem_data_in[6] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
+Warning (13012): Latch ExternalMemory:inst6|mem_data_in[11] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
     Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/SCOMP.vhd Line: 57
-Warning (13012): Latch ExternalMemory:inst6|mem_data_in[7] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
+Warning (13012): Latch ExternalMemory:inst6|mem_data_in[12] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
     Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/SCOMP.vhd Line: 57
-Warning (13012): Latch ExternalMemory:inst6|mem_data_in[8] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
+Warning (13012): Latch ExternalMemory:inst6|mem_data_in[13] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
     Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/SCOMP.vhd Line: 57
-Warning (13012): Latch ExternalMemory:inst6|mem_data_in[9] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
+Warning (13012): Latch ExternalMemory:inst6|mem_data_in[14] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
     Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/SCOMP.vhd Line: 57
-Warning (13012): Latch ExternalMemory:inst6|mem_data_in[10] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/SCOMP.vhd Line: 57
-Warning (13012): Latch ExternalMemory:inst6|mem_data_in[11] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/SCOMP.vhd Line: 57
-Warning (13012): Latch ExternalMemory:inst6|mem_data_in[12] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/SCOMP.vhd Line: 57
-Warning (13012): Latch ExternalMemory:inst6|mem_data_in[13] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/SCOMP.vhd Line: 57
-Warning (13012): Latch ExternalMemory:inst6|mem_data_in[14] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/SCOMP.vhd Line: 57
-Warning (13012): Latch ExternalMemory:inst6|mem_data_in[15] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 203
+Warning (13012): Latch ExternalMemory:inst6|mem_data_in[15] has unsafe behavior File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/ExternalMemory.vhd Line: 35
     Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/End/Documents/GitHub/ece2031projectG1/project/SCOMP.vhd Line: 57
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "TPs[3]" is stuck at GND
@@ -1968,15 +2083,15 @@ Info (17049): 15 registers lost all their fanouts during netlist optimizations.
 Critical Warning (35025): Partially connected in-system debug instance "auto_signaltap_0" to 34 of its 39 required data inputs, trigger inputs, acquisition clocks, and dynamic pins.  There were 0 illegal, 0 inaccessible, and 5 missing sources or connections.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 17 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1371 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1457 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 57 output pins
-    Info (21061): Implemented 1259 logic cells
+    Info (21061): Implemented 1345 logic cells
     Info (21064): Implemented 35 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 102 warnings
-    Info: Peak virtual memory: 4941 megabytes
-    Info: Processing ended: Wed Nov 06 17:51:02 2024
-    Info: Elapsed time: 00:00:35
-    Info: Total CPU time (on all processors): 00:00:33
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 164 warnings
+    Info: Peak virtual memory: 4937 megabytes
+    Info: Processing ended: Tue Nov 12 14:01:09 2024
+    Info: Elapsed time: 00:01:05
+    Info: Total CPU time (on all processors): 00:00:34
 
 

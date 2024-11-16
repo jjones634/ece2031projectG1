@@ -23,6 +23,11 @@ architecture Behavioral of ExternalMemory is
     signal mem_data_in      : std_logic_vector(15 downto 0) := (others => '0');
     signal mem_data_out     : std_logic_vector(15 downto 0) := (others => '0');
     signal mem_write_enable : std_logic := '0';
+	 -- password signals
+	 signal password_register : std_logic_vector(15 downto 0) := "0000000111111111";
+	 signal password_entered : std_logic_vector(15 downto 0) := (others => '0');
+	 signal access_granted : std_logic_vector(15 downto 0) := (others => '0');
+	 -- 
 
 begin
 
@@ -33,14 +38,25 @@ begin
 				 address_register <= (others => '0');
 				 mem_write_enable <= '0';
 				 mem_data_in      <= (others => '0');
+				 access_granted	<= (others => '0');
 			elsif CS = '1' then
+				 -- set up password check
+				 if IO_ADDR = x"72" and write_enable = '1' then
+					password_entered <= IO_DATA;
+					if password_entered = password_register then
+						access_granted <= "0000000000000001";
+					else
+						access_granted <= "0000000000000000";
+					end if;
+				 end if;
+				 
 				 -- Update address register if IO_ADDR is 0x70 and write_enable is active
 				 if IO_ADDR = x"70" and write_enable = '1' then
-					  address_register <= IO_DATA;
+					address_register <= IO_DATA;
 				 end if;
 
 				 -- Handle memory access when IO_ADDR is 0x71
-				 if IO_ADDR = x"71" then
+				 if IO_ADDR = x"71" and address_register < "0000000100000000" then --low enough address, no password needed
 					  if write_enable = '1' then
 							-- Write data to memory via altsyncram
 							mem_data_in      <= IO_DATA;
@@ -48,6 +64,13 @@ begin
 					  else
 							mem_write_enable <= '0';
 					  end if;
+				 elsif IO_ADDR = x"71" and address_register >= "0000000100000000" then --high address, need password (0x1FF or higher)
+					if write_enable = '1' and access_granted = "0000000000000001" then
+						mem_data_in      <= IO_DATA;
+						mem_write_enable <= '1';
+					 else
+						mem_write_enable <= '0';
+					 end if;
 				 else
 					  mem_write_enable <= '0';
 				 end if;
@@ -61,8 +84,14 @@ begin
     begin
         if resetn = '0' then
             IO_DATA <= (others => 'Z');
-        elsif CS = '1' and IO_ADDR = x"71" and write_enable = '0' then
+        elsif CS = '1' and IO_ADDR = x"71" and write_enable = '0' and address_register < "0000000100000000" then
             IO_DATA <= mem_data_out;
+		  elsif CS = '1' and IO_ADDR = x"71" and write_enable = '0' and address_register >= "0000000100000000" and access_granted = "0000000000000001" then
+            IO_DATA <= mem_data_out;
+		  elsif CS = '1' and IO_ADDR = x"71" and write_enable = '0' and address_register >= "0000000100000000" and access_granted = "0000000000000000" then
+            IO_DATA <= "0000000000000000"; --cant read high address with pass, so just give them 0s
+		  elsif CS = '1' and IO_ADDR = x"72" and write_enable = '0' then
+				IO_DATA      <= access_granted;
         else
             IO_DATA <= (others => 'Z');
         end if;

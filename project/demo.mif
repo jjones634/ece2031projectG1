@@ -5,147 +5,231 @@ ADDRESS_RADIX=HEX;
 DATA_RADIX=HEX;
 
 CONTENT BEGIN
-0000: 0882; -- 	LOAD Zero
-0001: 107F; -- 	STORE Address
-0002: 1080; -- 	STORE Value
-0003: 108B; -- 	STORE SwitchInput
+0000: 08D4; -- 	LOAD Zero
+0001: 10D1; -- 	STORE Address
+0002: 10D2; -- 	STORE Value
+0003: 10DF; -- 	STORE SwitchInput
 0004: 9804; -- 	OUT Hex0
 0005: 9805; -- 	OUT Hex1
-0006: 8076; -- 	CALL WaitStart ;wait for all switches down
-0007: 0885; -- 	LOAD Lights511
+0006: 80C8; -- 	CALL WaitStart ;wait for all switches down
+0007: 08D7; -- 	LOAD Lights511
 0008: 9801; -- 	OUT LEDs
-0009: 8071; -- 		CALL Delay
+0009: 80C3; -- 		CALL Delay
 000A: 9000; -- 		IN Switches
-000B: 108B; -- 		STORE SwitchInput
-000C: 2086; -- 		SUB Lights ;first switch on
-000D: 403A; -- 		JZERO GenerateAddress ;regular mode, pick address
-000E: 088B; -- 		LOAD SwitchInput
-000F: 2087; -- 		SUB Lights3
-0010: 4027; -- 		JZERO FillAddress ;other mode, fill addresses
-0011: 088B; -- 		LOAD SwitchInput
-0012: 208A; -- 		SUB Lights31
-0013: 4018; -- 		JZERO AttemptPassword ;enterpassword
-0014: 088B; -- 		LOAD SwitchInput
-0015: 2089; -- 		SUB Lights15
-0016: 4061; -- 		JZERO SearchAddress ;jump to searchaddress
-0017: 2809; -- 		JUMP DetermineMode
-0018: 088A; -- 		LOAD Lights31
-0019: 9801; -- 		OUT LEDs
-001A: 8071; -- 		CALL Delay
-001B: 9000; -- 		IN Switches
-001C: 108B; -- 		STORE SwitchInput
-001D: 6E00; -- 		ADDI -512
-001E: 4000; -- 		JZERO Start
-001F: 3800; -- 		JPOS Start
-0020: 088B; -- 		LOAD SwitchInput
-0021: 108C; -- 		STORE PasswordInput
-0022: 9804; -- 		OUT Hex0 ;display Password
-0023: 9872; -- 		OUT Pass ;give password
-0024: 9072; -- 		IN Pass ;see if access was granted
-0025: 9805; -- 		OUT Hex1 ; if 0 denied, if 1 granted
-0026: 2818; -- 		JUMP AttemptPassword	
-0027: 0887; -- 		LOAD Lights3
-0028: 9801; -- 		OUT LEDs
-0029: 8071; -- 		CALL Delay
-002A: 9000; -- 		IN Switches
-002B: 6E00; -- 		ADDI -512
-002C: 4057; -- 		JZERO NextPhase
-002D: 087F; -- 		LOAD Address
-002E: 9804; -- 		OUT Hex0 ;display the address
-002F: 9870; -- 		OUT Mem_Add
-0030: 0880; -- 		LOAD Value
-0031: 9805; -- 		OUT Hex1 ;display the address
-0032: 9871; -- 		OUT Mem
-0033: 087F; -- 		LOAD Address
-0034: 6801; -- 		ADDI 1
-0035: 107F; -- 		STORE Address
-0036: 0880; -- 		LOAD Value
-0037: 6801; -- 		ADDI 1
-0038: 1080; -- 		STORE Value
-0039: 2827; -- 		JUMP FillAddress
-003A: 0886; -- 		LOAD Lights
-003B: 9801; -- 		OUT LEDs
-003C: 8071; -- 		CALL Delay
-003D: 9000; -- 		IN Switches
-003E: 108B; -- 		STORE SwitchInput
-003F: 6E00; -- 		ADDI -512
-0040: 4046; -- 		JZERO WaitValue
-0041: 3846; -- 		JPOS WaitValue
-0042: 088B; -- 		LOAD SwitchInput
-0043: 107F; -- 		STORE Address
-0044: 9804; -- 		OUT Hex0 ;display the address 
-0045: 283A; -- 		JUMP GenerateAddress
-0046: 8076; -- 		CALL WaitStart
-0047: 0886; -- 		LOAD Lights
-0048: 9801; -- 		OUT LEDs
-0049: 8071; -- 		CALL Delay
-004A: 9000; -- 		IN Switches
-004B: 108B; -- 		STORE SwitchInput
-004C: 6E00; -- 		ADDI -512
-004D: 4053; -- 		JZERO StoreInMem
-004E: 3853; -- 		JPOS StoreInMem
-004F: 088B; -- 		LOAD SwitchInput
-0050: 1080; -- 		STORE Value
-0051: 9805; -- 		OUT Hex1 ;display the value 
-0052: 2849; -- 		JUMP GenerateValue
-0053: 087F; -- 		LOAD Address
-0054: 9870; -- 		OUT Mem_Add
-0055: 0880; -- 		LOAD Value
-0056: 9871; -- 		OUT Mem
-0057: 8076; -- 		CALL WaitStart
-0058: 0888; -- 		LOAD Lights7
-0059: 9801; -- 		OUT LEDs ;turn first  3 lights to indicate got to this part
-005A: 8071; -- 			CALL Delay
+000B: 10DF; -- 		STORE SwitchInput
+000C: 20D8; -- 		SUB Lights ;first switch on
+000D: 408C; -- 		JZERO GenerateAddress ;regular mode, pick address
+000E: 08DF; -- 		LOAD SwitchInput
+000F: 20D9; -- 		SUB Lights3
+0010: 4079; -- 		JZERO FillAddress ;other mode, fill addresses
+0011: 08DF; -- 		LOAD SwitchInput
+0012: 20DC; -- 		SUB Lights31
+0013: 406A; -- 		JZERO AttemptPassword ;enterpassword
+0014: 08DF; -- 		LOAD SwitchInput
+0015: 20DB; -- 		SUB Lights15
+0016: 40B3; -- 		JZERO SearchAddress ;jump to searchaddress
+0017: 08DF; -- 		LOAD SwitchInput
+0018: 20DE; -- 		SUB Lights128
+0019: 401E; -- 		JZERO StackMode ;jump to Stackmode
+001A: 08DF; -- 		LOAD SwitchInput
+001B: 20DD; -- 		SUB Lights256
+001C: 4044; -- 		JZERO QueueMode ;jump to Queuemode
+001D: 2809; -- 		JUMP DetermineMode
+001E: 08DE; -- 		LOAD Lights128
+001F: 9801; -- 		OUT LEDs
+0020: 08D4; -- 		LOAD Zero
+0021: 10D2; -- 		STORE Value
+0022: 9804; -- 		OUT Hex0
+0023: 9805; -- 		OUT Hex1
+0024: 80C3; -- 			CALL Delay
+0025: 9000; -- 			IN Switches
+0026: 10DF; -- 			STORE SwitchInput
+0027: 6E00; -- 			ADDI -512
+0028: 402E; -- 			JZERO StoreInStack
+0029: 382E; -- 			JPOS StoreInStack
+002A: 08DF; -- 			LOAD SwitchInput
+002B: 10D2; -- 			STORE Value
+002C: 9804; -- 			OUT Hex0 ;this will have the value aka switchinput
+002D: 2824; -- 			JUMP AddToStack ; loop
+002E: 08D2; -- 			LOAD Value
+002F: 9873; -- 			OUT Mem_Stack ;put on stack
+0030: 9804; -- 			OUT Hex0 ;show value you put on stack
+0031: 80C8; -- 		Call WaitStart
+0032: 08DE; -- 		LOAD Lights128
+0033: 9801; -- 		OUT LEDs
+0034: 80C3; -- 			Call Delay
+0035: 9000; -- 			IN Switches
+0036: 10DF; -- 			STORE SwitchInput
+0037: 6E00; -- 			ADDI -512
+0038: 4000; -- 			JZERO Start;last switch up
+0039: 08DF; -- 			LOAD SwitchInput
+003A: 6FFF; -- 			ADDI -1
+003B: 4024; -- 			JZERO AddToStack;First switch up
+003C: 08DF; -- 			LOAD SwitchInput
+003D: 6FFD; -- 			ADDI -3
+003E: 4040; -- 			JZERO ReadStack;First 2 switches up
+003F: 2834; -- 			JUMP DecisionStack ;else, loop
+0040: 9073; -- 			IN Mem_Stack ;show value you put on stack
+0041: 9804; -- 			OUT Hex0
+0042: 80C8; -- 			Call WaitStart
+0043: 2834; -- 			JUMP DecisionStack
+0044: 08DD; -- 		LOAD Lights256
+0045: 9801; -- 		OUT LEDs
+0046: 08D4; -- 		LOAD Zero
+0047: 10D2; -- 		STORE Value
+0048: 9804; -- 		OUT Hex0
+0049: 9805; -- 		OUT Hex1
+004A: 80C3; -- 			CALL Delay
+004B: 9000; -- 			IN Switches
+004C: 10DF; -- 			STORE SwitchInput
+004D: 6E00; -- 			ADDI -512
+004E: 4054; -- 			JZERO StoreInQueue
+004F: 3854; -- 			JPOS StoreInQueue
+0050: 08DF; -- 			LOAD SwitchInput
+0051: 10D2; -- 			STORE Value
+0052: 9804; -- 			OUT Hex0 ;this will have the value aka switchinput
+0053: 284A; -- 			JUMP AddToQueue ; loop
+0054: 08D2; -- 			LOAD Value
+0055: 9874; -- 			OUT Mem_Queue ;put on stack
+0056: 9804; -- 			OUT Hex0 ;show value you put on stack
+0057: 80C8; -- 		Call WaitStart
+0058: 08DD; -- 		LOAD Lights256
+0059: 9801; -- 		OUT LEDs
+005A: 80C3; -- 			Call Delay
 005B: 9000; -- 			IN Switches
-005C: 6FFF; -- 			ADDI -1
-005D: 4000; -- 			JZERO Start;means only first switch is up, go to the start
-005E: 6FFE; -- 			ADDI -2
-005F: 4061; -- 			JZERO SearchAddress;means 2 siwtches are up
-0060: 285A; -- 			JUMP Decision
-0061: 0882; -- 			LOAD Zero
-0062: 9804; -- 			OUT Hex0
-0063: 9805; -- 			OUT Hex1
-0064: 0889; -- 			LOAD Lights15
-0065: 9801; -- 			OUT LEDs ;turn first 3 lights to indicate got to this mode
-0066: 8071; -- 			CALL Delay
-0067: 9000; -- 			IN Switches
-0068: 108B; -- 			STORE SwitchInput
-0069: 6E00; -- 			ADDI -512
-006A: 4000; -- 			JZERO Start
-006B: 088B; -- 			LOAD SwitchInput
-006C: 9804; -- 			OUT Hex0 ;this will have the address aka switchinput
-006D: 9870; -- 			OUT Mem_Add
-006E: 9071; -- 			IN Mem
-006F: 9805; -- 			OUT Hex1 ; return value at the address
-0070: 2866; -- 			JUMP StartSearch ; loop
-0071: 9802; -- 	OUT    Timer
-0072: 9002; -- 	IN     Timer
-0073: 6FFF; -- 	ADDI   -1
-0074: 3072; -- 	JNEG   WaitingLoop
-0075: 8800; -- 	RETURN
-0076: 0884; -- 	LOAD Lights512
-0077: 9801; -- 	OUT LEDs ;turn last light on until done with loop
-0078: 8071; -- 		CALL Delay
-0079: 9000; -- 		IN Switches
-007A: 407C; -- 		JZERO Done
-007B: 2878; -- 		JUMP LoopStall
-007C: 0882; -- 		LOAD Zero
-007D: 9801; -- 		OUT LEDs ;turn off lights
-007E: 8800; -- 		RETURN
-007F: 0000; -- Address: Dw 0
-0080: 0000; -- Value: Dw 0
-0081: 0001; -- One:	DW 1
-0082: 0000; -- Zero:	DW 0
-0083: FFFF; -- NegOne:	DW -1
-0084: 0200; -- Lights512: DW 512 ;final light (wait start)
-0085: 01FF; -- Lights511: DW 511 ; 9 lights (determine mode)
-0086: 0001; -- Lights: DW 1 ;1 light (generate)
-0087: 0003; -- Lights3: DW 3 ;2 lights (fill)
-0088: 0007; -- Lights7: DW 7 ;3 lights (next phase decision)
-0089: 000F; -- Lights15: DW 15 ;4 lighrs (search addresses)
-008A: 001F; -- Lights31: DW 31 ;5 lights (attempt password)
-008B: 0000; -- SwitchInput: DW 0
-008C: 0000; -- PasswordInput: DW 0
-008D: 01FF; -- RealPassword: DW 511 ;unused by good reminder
-[008E..07FF] : 0000; -- [empty memory]
+005C: 10DF; -- 			STORE SwitchInput
+005D: 6E00; -- 			ADDI -512
+005E: 4000; -- 			JZERO Start;last switch up
+005F: 08DF; -- 			LOAD SwitchInput
+0060: 6FFF; -- 			ADDI -1
+0061: 404A; -- 			JZERO AddToQueue;First switch up
+0062: 08DF; -- 			LOAD SwitchInput
+0063: 6FFD; -- 			ADDI -3
+0064: 4066; -- 			JZERO ReadQueue;First 2 switches up
+0065: 285A; -- 			JUMP DecisionQueue ;else, loop
+0066: 9074; -- 			IN Mem_Queue ;show value you put on stack
+0067: 9804; -- 			OUT Hex0
+0068: 80C8; -- 			Call WaitStart
+0069: 285A; -- 			JUMP DecisionQueue
+006A: 08DC; -- 		LOAD Lights31
+006B: 9801; -- 		OUT LEDs
+006C: 80C3; -- 		CALL Delay
+006D: 9000; -- 		IN Switches
+006E: 10DF; -- 		STORE SwitchInput
+006F: 6E00; -- 		ADDI -512
+0070: 4000; -- 		JZERO Start
+0071: 3800; -- 		JPOS Start
+0072: 08DF; -- 		LOAD SwitchInput
+0073: 10E0; -- 		STORE PasswordInput
+0074: 9804; -- 		OUT Hex0 ;display Password
+0075: 9872; -- 		OUT Pass ;give password
+0076: 9072; -- 		IN Pass ;see if access was granted
+0077: 9805; -- 		OUT Hex1 ; if 0 denied, if 1 granted
+0078: 286A; -- 		JUMP AttemptPassword	
+0079: 08D9; -- 		LOAD Lights3
+007A: 9801; -- 		OUT LEDs
+007B: 80C3; -- 		CALL Delay
+007C: 9000; -- 		IN Switches
+007D: 6E00; -- 		ADDI -512
+007E: 40A9; -- 		JZERO NextPhase
+007F: 08D1; -- 		LOAD Address
+0080: 9804; -- 		OUT Hex0 ;display the address
+0081: 9870; -- 		OUT Mem_Add
+0082: 08D2; -- 		LOAD Value
+0083: 9805; -- 		OUT Hex1 ;display the address
+0084: 9871; -- 		OUT Mem
+0085: 08D1; -- 		LOAD Address
+0086: 6801; -- 		ADDI 1
+0087: 10D1; -- 		STORE Address
+0088: 08D2; -- 		LOAD Value
+0089: 6801; -- 		ADDI 1
+008A: 10D2; -- 		STORE Value
+008B: 2879; -- 		JUMP FillAddress
+008C: 08D8; -- 		LOAD Lights
+008D: 9801; -- 		OUT LEDs
+008E: 80C3; -- 		CALL Delay
+008F: 9000; -- 		IN Switches
+0090: 10DF; -- 		STORE SwitchInput
+0091: 6E00; -- 		ADDI -512
+0092: 4098; -- 		JZERO WaitValue
+0093: 3898; -- 		JPOS WaitValue
+0094: 08DF; -- 		LOAD SwitchInput
+0095: 10D1; -- 		STORE Address
+0096: 9804; -- 		OUT Hex0 ;display the address 
+0097: 288C; -- 		JUMP GenerateAddress
+0098: 80C8; -- 		CALL WaitStart
+0099: 08D8; -- 		LOAD Lights
+009A: 9801; -- 		OUT LEDs
+009B: 80C3; -- 		CALL Delay
+009C: 9000; -- 		IN Switches
+009D: 10DF; -- 		STORE SwitchInput
+009E: 6E00; -- 		ADDI -512
+009F: 40A5; -- 		JZERO StoreInMem
+00A0: 38A5; -- 		JPOS StoreInMem
+00A1: 08DF; -- 		LOAD SwitchInput
+00A2: 10D2; -- 		STORE Value
+00A3: 9805; -- 		OUT Hex1 ;display the value 
+00A4: 289B; -- 		JUMP GenerateValue
+00A5: 08D1; -- 		LOAD Address
+00A6: 9870; -- 		OUT Mem_Add
+00A7: 08D2; -- 		LOAD Value
+00A8: 9871; -- 		OUT Mem
+00A9: 80C8; -- 		CALL WaitStart
+00AA: 08DA; -- 		LOAD Lights7
+00AB: 9801; -- 		OUT LEDs ;turn first  3 lights to indicate got to this part
+00AC: 80C3; -- 			CALL Delay
+00AD: 9000; -- 			IN Switches
+00AE: 6FFF; -- 			ADDI -1
+00AF: 4000; -- 			JZERO Start;means only first switch is up, go to the start
+00B0: 6FFE; -- 			ADDI -2
+00B1: 40B3; -- 			JZERO SearchAddress;means 2 siwtches are up
+00B2: 28AC; -- 			JUMP Decision
+00B3: 08D4; -- 			LOAD Zero
+00B4: 9804; -- 			OUT Hex0
+00B5: 9805; -- 			OUT Hex1
+00B6: 08DB; -- 			LOAD Lights15
+00B7: 9801; -- 			OUT LEDs ;turn first 3 lights to indicate got to this mode
+00B8: 80C3; -- 			CALL Delay
+00B9: 9000; -- 			IN Switches
+00BA: 10DF; -- 			STORE SwitchInput
+00BB: 6E00; -- 			ADDI -512
+00BC: 4000; -- 			JZERO Start
+00BD: 08DF; -- 			LOAD SwitchInput
+00BE: 9804; -- 			OUT Hex0 ;this will have the address aka switchinput
+00BF: 9870; -- 			OUT Mem_Add
+00C0: 9071; -- 			IN Mem
+00C1: 9805; -- 			OUT Hex1 ; return value at the address
+00C2: 28B8; -- 			JUMP StartSearch ; loop
+00C3: 9802; -- 	OUT    Timer
+00C4: 9002; -- 	IN     Timer
+00C5: 6FFF; -- 	ADDI   -1
+00C6: 30C4; -- 	JNEG   WaitingLoop
+00C7: 8800; -- 	RETURN
+00C8: 08D6; -- 	LOAD Lights512
+00C9: 9801; -- 	OUT LEDs ;turn last light on until done with loop
+00CA: 80C3; -- 		CALL Delay
+00CB: 9000; -- 		IN Switches
+00CC: 40CE; -- 		JZERO Done
+00CD: 28CA; -- 		JUMP LoopStall
+00CE: 08D4; -- 		LOAD Zero
+00CF: 9801; -- 		OUT LEDs ;turn off lights
+00D0: 8800; -- 		RETURN
+00D1: 0000; -- Address: Dw 0
+00D2: 0000; -- Value: Dw 0
+00D3: 0001; -- One:	DW 1
+00D4: 0000; -- Zero:	DW 0
+00D5: FFFF; -- NegOne:	DW -1
+00D6: 0200; -- Lights512: DW 512 ;final light (wait start)
+00D7: 01FF; -- Lights511: DW 511 ; 9 lights (determine mode)
+00D8: 0001; -- Lights: DW 1 ;1 light (generate)
+00D9: 0003; -- Lights3: DW 3 ;2 lights (fill)
+00DA: 0007; -- Lights7: DW 7 ;3 lights (next phase decision)
+00DB: 000F; -- Lights15: DW 15 ;4 lights (search addresses)
+00DC: 001F; -- Lights31: DW 31 ;5 lights (attempt password)
+00DD: 0100; -- Lights256: DW 256 ; 9th light (queue)
+00DE: 0080; -- Lights128: DW 128 ; 8th light (stack)
+00DF: 0000; -- SwitchInput: DW 0
+00E0: 0000; -- PasswordInput: DW 0
+00E1: 01FF; -- RealPassword: DW 511 ;unused by good reminder
+[00E2..07FF] : 0000; -- [empty memory]
 END;

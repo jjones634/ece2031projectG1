@@ -35,6 +35,6 @@ begin
   TIMER_EN     <= '1' WHEN (ADDR_INT = 16#002#) and (IO_CYCLE = '1') ELSE '0';
   HEX0_EN      <= '1' WHEN (ADDR_INT = 16#004#) and (IO_CYCLE = '1') ELSE '0';
   HEX1_EN      <= '1' WHEN (ADDR_INT = 16#005#) and (IO_CYCLE = '1') ELSE '0';
-  EXTMEM_EN    <= '1' WHEN ((ADDR_INT = 16#070#) or (ADDR_INT = 16#071#) or (ADDR_INT = 16#072#)) and (IO_CYCLE = '1') ELSE '0';
+  EXTMEM_EN    <= '1' WHEN ((ADDR_INT = 16#070#) or (ADDR_INT = 16#071#) or (ADDR_INT = 16#072#) or (ADDR_INT = 16#073#) or (ADDR_INT = 16#074#)) and (IO_CYCLE = '1') ELSE '0';
       
 END a;

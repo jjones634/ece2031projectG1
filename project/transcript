@@ -1,0 +1,139 @@
+# vsim work.tb_ExternalMemory 
+# Start time: 05:43:11 on Nov 18,2024
+# ** Error (suppressible): (vsim-19) Failed to access library 'work' at "work".
+# No such file or directory. (errno = ENOENT)
+# Error loading design
+# End time: 05:43:12 on Nov 18,2024, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+vcom -2008 *.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 05:44:52 on Nov 18,2024
+# vcom -reportprogress 300 -2008 DIG_IN.vhd DIG_OUT.vhd ExternalMemory.vhd HEX_DISP.vhd IO_DECODER.vhd PLL_main.vhd SCOMP.vhd TIMER.vhd clk_div.vhd tb_ExternalMemory.vhd 
+# ** Error: (vcom-66) Execution of vlib.exe failed. Please check the error log for more details.
+# End time: 05:44:52 on Nov 18,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vcom failed.
+vlib work
+vcom -2008 *.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 05:46:21 on Nov 18,2024
+# vcom -reportprogress 300 -2008 DIG_IN.vhd DIG_OUT.vhd ExternalMemory.vhd HEX_DISP.vhd IO_DECODER.vhd PLL_main.vhd SCOMP.vhd TIMER.vhd clk_div.vhd tb_ExternalMemory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package LPM_COMPONENTS
+# -- Compiling entity DIG_IN
+# -- Compiling architecture a of DIG_IN
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity DIG_OUT
+# -- Compiling architecture a of DIG_OUT
+# -- Loading package NUMERIC_STD
+# -- Loading package altera_mf_components
+# -- Compiling entity ExternalMemory
+# -- Compiling architecture Behavioral of ExternalMemory
+# -- Compiling entity HEX_DISP
+# -- Compiling architecture a of HEX_DISP
+# ** Error (suppressible): HEX_DISP.vhd(32): (vcom-1339) Selected signal assignment choices cover only 2 out of 9 cases.
+# ** Note: HEX_DISP.vhd(54): VHDL Compiler exiting
+# End time: 05:46:21 on Nov 18,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vcom failed.
+vcom -quiet -error 1000 <filename>.vhd
+# couldn't read file "filename>.vhd": no such file or directory
+vcom -quiet -error 1000 HEX_DISP.vhd
+# ** Warning: (vcom-52) Unknown message number: 1000.
+# ** Error (suppressible): HEX_DISP.vhd(32): (vcom-1339) Selected signal assignment choices cover only 2 out of 9 cases.
+# ** Note: HEX_DISP.vhd(54): VHDL Compiler exiting
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vcom failed.
+vcom -quiet -error 1339 HEX_DISP.vhd
+# ** Error (suppressible): HEX_DISP.vhd(32): (vcom-1339) Selected signal assignment choices cover only 2 out of 9 cases.
+# ** Note: HEX_DISP.vhd(54): VHDL Compiler exiting
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vcom failed.
+vcom -suppress vcom-1339 HEX_DISP.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 05:50:05 on Nov 18,2024
+# vcom -reportprogress 300 -suppress vcom-1339 HEX_DISP.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity HEX_DISP
+# -- Compiling architecture a of HEX_DISP
+# End time: 05:50:05 on Nov 18,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0, Suppressed Errors: 1
+
+vlib workvsim work.tb_ExternalMemory
+# Usage: vlib -help
+#        vlib [-short | -dos | -long | -unix ]
+#             [-type (directory|flat)]
+#             [-compress | -nocompress]
+#             [-depend [<depend>]] [-mapping [<mapping>]] [-target [<target>]]
+#             [-dirpath] <path>
+#             [-vendor [<vendor>]] [-version [<version>]]
+#             [-unnamed_designs <count>] [(-lock|-unlock) <design>]
+#             [-locklib|-unlocklib] <library_name>
+
+vsim work.tb_ExternalMemory
+# vsim work.tb_ExternalMemory 
+# Start time: 05:50:55 on Nov 18,2024
+# ** Error: (vsim-3170) Could not find 'tb_ExternalMemory'.
+#         Searched libraries:
+#             C:/Users/dell/Desktop/ECE2031/ece2031projectG1/project/work
+# Error loading design
+
+# End time: 05:50:55 on Nov 18,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vsim work.ExternalMemory
+# vsim work.ExternalMemory 
+# Start time: 05:51:16 on Nov 18,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading altera_mf.altera_mf_components
+# Loading work.externalmemory(behavioral)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+vsim work.tb_ExternalMemory
+# End time: 05:51:23 on Nov 18,2024, Elapsed time: 0:00:07
+# Errors: 0, Warnings: 0
+# vsim work.tb_ExternalMemory 
+# Start time: 05:51:24 on Nov 18,2024
+# ** Error: (vsim-3170) Could not find 'tb_ExternalMemory'.
+#         Searched libraries:
+#             C:/Users/dell/Desktop/ECE2031/ece2031projectG1/project/work
+# Error loading design
+# End time: 05:51:24 on Nov 18,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vsim work.ExternalMemory
+# vsim work.ExternalMemory 
+# Start time: 05:51:34 on Nov 18,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading altera_mf.altera_mf_components
+# Loading work.externalmemory(behavioral)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+run -all
+add wave -position end sim:/tb_ExternalMemory/*
+# ** UI-Msg: (vish-4014) No objects found matching '/tb_ExternalMemory/*'.
+
+vsim work.tb_ExternalMemory
+# End time: 05:52:07 on Nov 18,2024, Elapsed time: 0:00:33
+# Errors: 0, Warnings: 0
+# vsim work.tb_ExternalMemory 
+# Start time: 05:52:07 on Nov 18,2024
+# ** Error: (vsim-3170) Could not find 'tb_ExternalMemory'.
+#         Searched libraries:
+#             C:/Users/dell/Desktop/ECE2031/ece2031projectG1/project/work
+# Error loading design
+# End time: 05:52:08 on Nov 18,2024, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0

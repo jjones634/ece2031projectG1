@@ -1,6 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 library altera_mf;
 use altera_mf.altera_mf_components.all;
@@ -21,9 +22,9 @@ architecture Behavioral of ExternalMemory is
 	-- Address register for the target memory address
    signal address_register : std_logic_vector(15 downto 0) := (others => '0');
 	-- Stack and queue pointers
-	signal stack_pointer 	 : std_logic_vector(15 downto 0) := x"0080"; -- 128 
-	signal queue_front  	 : std_logic_vector(15 downto 0) := x"00C0"; -- 192
-	signal queue_rear   	 : std_logic_vector(15 downto 0) := x"00C0"; -- 192
+	signal stack_pointer 	: std_logic_vector(15 downto 0) := x"0080"; -- 128 
+	signal queue_front  	 	: std_logic_vector(15 downto 0) := x"00C0"; -- 192
+	signal queue_rear   	 	: std_logic_vector(15 downto 0) := x"00C0"; -- 192
 	signal queue_full       : std_logic := '0';
 	signal queue_empty      : std_logic := '1';
 	-- Data registers
@@ -76,11 +77,11 @@ begin
 						mem_data_in      <= IO_DATA;
 						mem_write_enable <= '1';
 						-- Handle stack limit
-						if (stack_pointer + 1) <= x"00C0" then
-							stack_pointer <= stack_pointer + 1;
+						if (unsigned(stack_pointer) + 1) <= 192 then
+							stack_pointer <= std_logic_vector(unsigned(stack_pointer) + 1);
 						end if;
 					 elsif write_enable = '0' and stack_pointer > x"0080" then
-						stack_pointer    <= stack_pointer - 1;
+						stack_pointer    <= std_logic_vector(unsigned(stack_pointer) - 1);
 				      address_register <= stack_pointer;
 						mem_write_enable <= '0';
 					 end if;
@@ -93,7 +94,7 @@ begin
 					   address_register <= queue_rear;
 						mem_data_in      <= IO_DATA;
 						mem_write_enable <= '1';
-						queue_rear <= queue_rear + 1;
+						queue_rear <= std_logic_vector(unsigned(queue_rear) + 1);
 						-- Handle wrap-around
 						if queue_rear > x"00FF" then
 							queue_rear <= x"00C0";
@@ -104,7 +105,7 @@ begin
 						queue_empty <= '0';
 					 elsif write_enable = '0' and queue_empty = '0' then
 						address_register <= queue_front;
-						queue_front      <= queue_front + 1;
+						queue_front      <= std_logic_vector(unsigned(queue_front) + 1);
 						-- Handle wrap-around
 						if queue_front > x"00FF" then
 							queue_front <= x"00C0";

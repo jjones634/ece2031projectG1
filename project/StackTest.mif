@@ -1,0 +1,23 @@
+WIDTH=16;
+DEPTH=2048;
+
+ADDRESS_RADIX=HEX;
+DATA_RADIX=HEX;
+
+CONTENT BEGIN
+0000: 080B; -- LOAD Value1
+0001: 9873; -- OUT Stack
+0002: 080C; -- LOAD Value2
+0003: 9873; -- OUT Stack
+0004: 080D; -- LOAD Value3
+0005: 9873; -- OUT Stack
+0006: 9073; -- IN Stack
+0007: 9804; -- OUT Hex0
+0008: 9073; -- IN Stack
+0009: 9805; -- OUT Hex1
+000A: 280A; -- JUMP Here
+000B: 0005; -- Value1: Dw 5
+000C: 0009; -- Value2: Dw 9
+000D: 0016; -- Value3: Dw 22
+[000E..07FF] : 0000; -- [empty memory]
+END;

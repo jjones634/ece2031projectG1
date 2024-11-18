@@ -1,0 +1,23 @@
+WIDTH=16;
+DEPTH=2048;
+
+ADDRESS_RADIX=HEX;
+DATA_RADIX=HEX;
+
+CONTENT BEGIN
+0000: 080B; -- LOAD Value1
+0001: 9874; -- OUT Queue
+0002: 080C; -- LOAD Value2
+0003: 9874; -- OUT Queue
+0004: 080D; -- LOAD Value3
+0005: 9874; -- OUT Queue
+0006: 9074; -- IN Queue
+0007: 9874; -- OUT Queue
+0008: 9074; -- IN Queue
+0009: 9874; -- OUT Queue
+000A: 280A; -- JUMP Here
+000B: 0005; -- Value1: Dw 5
+000C: 0009; -- Value2: Dw 9
+000D: 0016; -- Value3: Dw 22
+[000E..07FF] : 0000; -- [empty memory]
+END;

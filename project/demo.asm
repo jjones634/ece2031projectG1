@@ -30,7 +30,124 @@ Start:
 		LOAD SwitchInput
 		SUB Lights15
 		JZERO SearchAddress ;jump to searchaddress
+		
+		LOAD SwitchInput
+		SUB Lights128
+		JZERO StackMode ;jump to Stackmode
+		LOAD SwitchInput
+		SUB Lights256
+		JZERO QueueMode ;jump to Queuemode
 		JUMP DetermineMode
+		
+	Stackmode:
+		LOAD Lights128
+		OUT LEDs
+		LOAD Zero
+		STORE Value
+		OUT Hex0
+		OUT Hex1
+			
+		AddToStack:
+			CALL Delay
+			IN Switches
+			STORE SwitchInput
+			
+			;if last switch then that is the value to be saved
+			ADDI -512
+			JZERO StoreInStack
+			JPOS StoreInStack
+			
+			LOAD SwitchInput
+			STORE Value
+			;if anything else, display value 
+			OUT Hex0 ;this will have the value aka switchinput
+			
+			JUMP AddToStack ; loop
+		StoreInStack:
+			LOAD Value
+			;if we modify perihperal to allow read from 0x70, we can also show the stack address easily here with IN Mem_Add OUT Hex1 for example
+			OUT Mem_Stack ;put on stack
+			OUT Hex0 ;show value you put on stack
+		Call WaitStart
+		LOAD Lights128
+		OUT LEDs
+		DecisionStack:
+			Call Delay
+			IN Switches
+			STORE SwitchInput
+			ADDI -512
+			JZERO Start;last switch up
+			LOAD SwitchInput
+			ADDI -1
+			JZERO AddToStack;First switch up
+			LOAD SwitchInput
+			ADDI -3
+			JZERO ReadStack;First 2 switches up
+			JUMP DecisionStack ;else, loop
+		ReadStack:
+			IN Mem_Stack ;show value you put on stack
+			OUT Hex0
+			Call WaitStart
+			LOAD Lights128
+			OUT LEDs
+			JUMP DecisionStack
+			
+			
+	Queuemode:
+		LOAD Lights256
+		OUT LEDs
+		LOAD Zero
+		STORE Value
+		OUT Hex0
+		OUT Hex1
+			
+		AddToQueue:
+			CALL Delay
+			IN Switches
+			STORE SwitchInput
+			
+			;if last switch then that is the value to be saved
+			ADDI -512
+			JZERO StoreInQueue
+			JPOS StoreInQueue
+			
+			LOAD SwitchInput
+			STORE Value
+			;if anything else, display value 
+			OUT Hex0 ;this will have the value aka switchinput
+			
+			JUMP AddToQueue ; loop
+		StoreInQueue:
+			LOAD Value
+			OUT Mem_Queue ;put on stack
+			OUT Hex0 ;show value you put on stack
+		Call WaitStart
+		LOAD Lights256
+		OUT LEDs
+		DecisionQueue:
+			Call Delay
+			IN Switches
+			STORE SwitchInput
+			ADDI -512
+			JZERO Start;last switch up
+			LOAD SwitchInput
+			ADDI -1
+			JZERO AddToQueue;First switch up
+			LOAD SwitchInput
+			ADDI -3
+			JZERO ReadQueue;First 2 switches up
+			JUMP DecisionQueue ;else, loop
+		ReadQueue:
+			IN Mem_Queue ;show value you put on stack
+			OUT Hex0
+			Call WaitStart
+			LOAD Lights256
+			OUT LEDs
+			JUMP DecisionQueue
+		
+		
+	
+	
 	AttemptPassword:
 		LOAD Lights31
 		OUT LEDs
@@ -182,8 +299,10 @@ Lights511: DW 511 ; 9 lights (determine mode)
 Lights: DW 1 ;1 light (generate)
 Lights3: DW 3 ;2 lights (fill)
 Lights7: DW 7 ;3 lights (next phase decision)
-Lights15: DW 15 ;4 lighrs (search addresses)
+Lights15: DW 15 ;4 lights (search addresses)
 Lights31: DW 31 ;5 lights (attempt password)
+Lights256: DW 256 ; 9th light (queue)
+Lights128: DW 128 ; 8th light (stack)
 SwitchInput: DW 0
 PasswordInput: DW 0
 RealPassword: DW 511 ;unused by good reminder
@@ -198,3 +317,5 @@ Hex1:      EQU 005
 Mem_Add:   EQU &H070
 Mem:       EQU &H071
 Pass:      EQU &H072
+Mem_Stack: EQU &H073
+Mem_Queue: EQU &H074
